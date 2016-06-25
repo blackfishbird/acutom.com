@@ -1,0 +1,307 @@
+html {
+	height: 100%;
+	font-family: "Merriweather", "Times New Roman", Times, serif;
+	font-size: 15px;
+}
+body {
+	min-height: 100%;
+	padding-top: 70px;
+	font-family: "Merriweather", "Times New Roman", Times, serif;
+	font-size: 15px;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Montserrat", Helvetica, Arial, sans-serif;
+	font-weight: 700;
+	line-height: 1;
+	margin: 15px auto;
+}
+a, button, label {
+	font-family: "Montserrat", Helvetica, Arial, sans-serif;
+}
+div.modal button:not(.close) {
+	min-width: 75px;
+}
+button.navbar-toggle,
+a.navbar-toggle {
+	margin: 5px 5px;
+	height: 40px;
+	width: 45px;
+	color: #777;
+	background-color: #FFFFFF;
+	-webkit-transition: background-color .3s;
+	transition: background-color .3s;
+}
+.btn {
+	font-weight: 700;
+	color: #777;
+}
+.row {
+	padding: 15px;
+}
+.navbar-brand {
+	font-family: "Montserrat", Helvetica, Arial, sans-serif;
+	font-weight: 700;
+	font-size: 30px;
+}
+.navbar-default, .navbar-nav>li {
+	font-family: "Montserrat", Helvetica, Arial, sans-serif;
+	font-weight: 700;
+	font-size: 15px;
+}
+.button-line {
+	width: 0px;
+	display: block;
+	border-bottom: solid 1px;
+	-webkit-transition: width .3s ease-out;
+	transition: width .3s ease-out;
+}
+.navbar-nav>li>a:hover .button-line {
+	width: 100%;
+}
+.navbar-fixed-top {
+	box-shadow: 0px 0px 10px 1px rgba(20%, 20%, 20%, .2);
+}
+.text-center {
+	text-align: center;
+}
+.text-left {
+	text-align: left;
+}
+.text-right {
+	text-align: right;
+}
+.text-notice {
+	color: #C9302C;
+}
+.border-bottom {
+	border-bottom: 1px solid;
+}
+.border-bottom-gray {
+	border-bottom: 1px solid #E5E5E5;
+}
+.btn-service {
+	padding: 0;
+	margin: 15px auto;
+	width: 100%;
+	height: 350px;
+	border: solid 1px;
+	opacity: .5;
+	text-decoration: underline;
+	-webkit-transition: opacity .5s, color .5s;
+	transition: opacity .5s, color .5s;
+}
+.btn-service:hover, .btn-service:focus {
+	opacity: 1;
+	text-decoration: underline;
+}
+.btn-service>h1,
+.btn-service>h2,
+.btn-service>h3,
+.btn-service>h4,
+.btn-service>h5,
+.btn-service>h6 {
+	padding: 0;
+	margin: 0;
+	line-height: 350px;
+	vertical-align: middle;
+}
+#btn-massage {
+	background: url('img/bk_massage_s.jpg') no-repeat center;
+	background-size: 100% auto;
+}
+#btn-acupuncture {
+	background: url('img/bk_acupuncture_s.jpg') no-repeat center;
+	background-size: auto 100%;
+}
+.img-introduct {
+	width: 60%;
+}
+.open>.dropdown-menu {
+	-webkit-transform: scale(1, 1);
+	transform: scale(1, 1);
+}
+ul.dropdown-menu {
+	width: 100%;
+	-webkit-transform-origin: top;
+	transform-origin: top;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	-webkit-transform: scale(1, 0);
+	transform: scale(1, 0);
+	display: block;
+	-webkit-transition: all .3s ease-out;
+	transition: all .3s ease-out;
+}
+.dropdown-menu>.active>a,
+.dropdown-menu>.active>a:hover,
+.dropdown-menu>.active>a:focus {
+	color: #000000;
+	background-color: #E7E7E7;
+}
+.modal .modal-title {
+	margin: 0 auto;
+}
+.btn-paypal {
+	background: url('https://www.paypalobjects.com/webstatic/en_AU/i/buttons/btn_paywith_primary_m.png') no-repeat top center;
+	width: 170px;
+	height: 32px;
+	border: #F05000 solid 1px;
+	opacity: .5;
+	-webkit-transition: opacity .3s;
+	transition: opacity .3s;
+}
+.btn-paypal:hover {
+	opacity: 1;
+}
+.btn-paypal:active {
+	background: url('https://www.paypalobjects.com/webstatic/en_AU/i/buttons/btn_paywith_primary_m.png') no-repeat top center;
+	opacity: 1;
+}
+.btn-notice {
+	background-color: #FFFFFF;
+	border-color: #D9534F;
+	color: #D9534F;
+	font-weight: 700;
+	-webkit-transition: background-color .3s, color .3s;
+	transition: background-color .3s, color .3s;
+}
+.btn-notice:hover {
+	background-color: #C9302C;
+	color: #FFFFFF;
+}
+.btn-notice:active {
+	background-color: #C9302C;
+	color: #FFFFFF;
+}
+.btn-default {
+	-webkit-transition: background-color .3s;
+	transition: background-color .3s;
+}
+#login-msg {
+	display: none;
+}
+#cancel-msg {
+	display: none;
+}
+
+/*  fullcalendar  */
+.calendar-default {
+	max-width: 750px;
+	margin: 15px auto;
+}
+.calendar-default .fc-widget-content {
+	background: #E7E7E7;
+}
+.calendar-default td:not(.fc-bgevent) {
+	pointer-events: none;
+}
+.calendar-default .fc-bgevent {
+	background: #FFFFFF;
+	opacity: .8;
+	pointer-events: auto;
+	-webkit-transition: opacity .3s ease-out, box-shadow .3s ease-out;
+	transition: opacity .3s ease-out, box-shadow .3s ease-out;
+}
+.calendar-default .fc-bgevent:hover {
+	opacity: 1;
+	box-shadow: inset 0px 0px 8px rgba(0%, 0%, 0%, .5);
+}
+.fc td.fc-today {
+	background: #E7E7E7;
+}
+.calendar-default .fc-event {
+/*	background-color: rgba(201, 48, 44, 0.7);*/
+/*	border: 1px solid #C9302C;*/
+	border-radius: 0px;
+}
+.calendar-default .fc-day-grid-event {
+	margin: 0;
+}
+.calendar-admin .fc-event-container {
+	pointer-events: auto;
+}
+
+/*  bootstrap-table  */
+table .bt-dbline-b {
+	border-bottom: double #DDDDDD;
+}
+.text-strong {
+	font-weight: bolder;
+}
+table#special-table .bt-dbline-r,
+table#special-table th:nth-child(2),
+table#special-table th:nth-child(6),
+table#special-table th:nth-child(12) {
+	border-right: double #DDDDDD;
+}
+table .bt-close {
+	background: #F5F5F5;
+}
+.text-gray {
+	color: #DDDDDD;
+}
+
+/*  admin-special.php  */
+#add-modal .col-md-1,
+#add-modal .col-md-2,
+#add-modal .col-md-3,
+#add-modal .col-md-4,
+#add-modal .col-md-5,
+#add-modal .col-md-6,
+#add-modal .col-md-7,
+#add-modal .col-md-8,
+#add-modal .col-md-9,
+#add-modal .col-md-10,
+#add-modal .col-md-11,
+#add-modal .col-md-12 {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+/*  admin-other.php  */
+#pw-check {
+	display: none;
+	vertical-align: middle;
+	line-height: 34px;
+}
+#pw-check:after, #pw-check:before {
+	padding: 0 5px;
+}
+#pw-old-check, #pw-new-check {
+	display: none;
+	vertical-align: middle;
+	line-height: 21px;
+}
+#pw-old-check:after, #pw-old-check:before,
+#pw-new-check:after, #pw-new-check:before {
+	padding: 0 5px;
+	margin-bottom: 5px
+}
+#is-canceled {
+	display: none;
+}
+
+/*  services  */
+article {
+	margin: 15px auto;
+	text-align: left;
+}
+article:first-letter {
+	color: #777777;
+	font-weight: 700;
+	line-height: 1;
+	font-size: 30px;
+}
+article p {
+	text-indent: 15px;
+}
+
+/*  media set  */
+@media (min-width: 768px) {
+	.col-sm-left {
+		text-align: left;
+	}
+	.col-sm-right {
+		text-align: right;
+	}
+}
