@@ -48,6 +48,9 @@ a.navbar-toggle {
 	font-weight: 700;
 	font-size: 15px;
 }
+.button-inline {
+	display: inline-block;
+}
 .button-line {
 	width: 0px;
 	display: block;
@@ -150,13 +153,15 @@ ul.dropdown-menu {
 	-webkit-transition: opacity .3s;
 	transition: opacity .3s;
 }
-.btn-paypal:hover {
+.btn-paypal:hover, .btn-paypal:active {
 	opacity: 1;
 }
+/*
 .btn-paypal:active {
 	background: url('https://www.paypalobjects.com/webstatic/en_AU/i/buttons/btn_paywith_primary_m.png') no-repeat top center;
 	opacity: 1;
 }
+*/
 .btn-notice {
 	background-color: #FFFFFF;
 	border-color: #D9534F;
@@ -165,11 +170,7 @@ ul.dropdown-menu {
 	-webkit-transition: background-color .3s, color .3s;
 	transition: background-color .3s, color .3s;
 }
-.btn-notice:hover {
-	background-color: #C9302C;
-	color: #FFFFFF;
-}
-.btn-notice:active {
+.btn-notice:hover, .btn-notice:active {
 	background-color: #C9302C;
 	color: #FFFFFF;
 }
@@ -210,8 +211,6 @@ ul.dropdown-menu {
 	background: #E7E7E7;
 }
 .calendar-default .fc-event {
-/*	background-color: rgba(201, 48, 44, 0.7);*/
-/*	border: 1px solid #C9302C;*/
 	border-radius: 0px;
 }
 .calendar-default .fc-day-grid-event {
@@ -219,6 +218,9 @@ ul.dropdown-menu {
 }
 .calendar-admin .fc-event-container {
 	pointer-events: auto;
+}
+.fc button {
+	border-radius: 0px!important;
 }
 
 /*  bootstrap-table  */
@@ -285,6 +287,7 @@ table .bt-close {
 article {
 	margin: 15px auto;
 	text-align: left;
+	min-height: 300px;
 }
 article:first-letter {
 	color: #777777;
@@ -293,7 +296,67 @@ article:first-letter {
 	font-size: 30px;
 }
 article p {
-	text-indent: 15px;
+	text-indent: 30px;
+}
+.service-items {
+	margin: 0 auto;
+	padding: 0;
+	list-style: none;
+}
+.service-items li {
+	font-size: 18px;
+	font-weight: 700;
+}
+.service-items a {
+	color: #777;
+	text-decoration: none;
+	width: 100%;
+	display: inline-block;
+	padding: 15px 15px;
+	-webkit-transition: background-color .3s, color .3s;
+	transition: background-color .3s, color .3s;
+}
+.service-items a:hover, .service-items a:focus, .service-items a:active {
+	background-color: #E7E7E7;
+	color: #000000;
+}
+.go-top {
+	position: fixed;
+	right: 0;
+	bottom: 40px;
+}
+.btn-top {
+	border-top: solid 1px;
+	border-bottom: solid 1px;
+	border-left: solid 1px;
+	border-radius: 4px 0px 0px 4px;
+	opacity: .5;
+	-webkit-transition: opacity .3s;
+	transition: opacity .3s;
+}
+.btn-top:hover {
+	opacity: .8;
+}
+
+/*  pricing */
+.table-pricing {
+	width: 100%;
+	font-size: 15px;
+}
+.table-pricing th, .table-pricing td {
+	border: solid 3px #FFF;
+	line-height: 1.5;
+	height: 50px;
+	vertical-align: middle;
+	padding-left: 15px;
+}
+.table-pricing thead {
+	font-family: "Montserrat", Helvetica, Arial, sans-serif;
+	background-color: #DDD;
+	color: #FFF;
+}
+.table-pricing tbody {
+	background-color: #FAFAFA;
 }
 
 /*  media set  */
@@ -303,5 +366,18 @@ article p {
 	}
 	.col-sm-right {
 		text-align: right;
+	}
+	.col-sm-border {
+		padding-left: 45px;
+	}
+	.service-items {
+		border-right: solid 3px #E7E7E7;
+	}
+}
+@media (max-width: 1200px) and (min-width: 768px) {
+	.navbar-default, .navbar-nav>li {
+		font-family: "Montserrat", Helvetica, Arial, sans-serif;
+		font-weight: 700;
+		font-size: 10px;
 	}
 }

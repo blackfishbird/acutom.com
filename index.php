@@ -37,16 +37,29 @@
 					</button>
 					<a role="button" class="btn navbar-toggle collapsed" href="<?php echo HP_ADMIN_URL; ?>" aria-expanded="false" aria-controls="navbar">
 						<span class="sr-only">Management page</span>
-						<span class="glyphicon glyphicon-user"></span>
+						<span class="glyphicon glyphicon-cog"></span>
 					</a>
 				<?php endif; ?>
 				<a role="button" class="navbar-brand" href="<?php echo HP_URL; ?>"><strong><?php echo HP_TITLE; ?></strong></a>
 			</div>
 			<div id="navbar-left" class="navbar-collapse collapse navbar-left">
 				<ul class="nav navbar-nav">
-					<li role="presentation"><a href="staff.php">DOCTORS STAFF<span class="button-line"></span></a></li>
+					<li role="presentation"><a href="service-a.php"><span class="button-inline">WHAT IS ACUPUNCTURE<span class="button-line"></span></span></a></li>
 					<li role="presentation" class="dropdown">
-						<a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false">ONLINE RESERVATION <span class="caret"></span><span class="button-line"></span></a>
+						<a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false"><span class="button-inline">SERVICES<span class="button-line"></span></span> <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li class="divider"></li>
+							<li><a href="service-m.php">Massage</a></li>
+							<li class="divider"></li>
+							<li><a href="service-a.php">Acupuncture</a></li>
+							<li class="divider"></li>
+							<li><a href="service-other.php">Other Services</a></li>
+							<li class="divider"></li>
+						</ul>
+					</li>
+					<li role="presentation"><a href="pricing.php"><span class="button-inline">PRICING<span class="button-line"></span></span></a></li>
+					<li role="presentation" class="dropdown">
+						<a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false"><span class="button-inline">ONLINE RESERVATION<span class="button-line"></span></span> <span class="caret"></span></a>
 						<ul class="dropdown-menu" role="menu">
 							<li class="divider"></li>
 							<li><a href="massage.php">Massage</a></li>
@@ -57,14 +70,26 @@
 							<li class="divider"></li>
 						</ul>
 					</li>
+					<li role="presentation" class="dropdown">
+						<a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false"><span class="button-inline">ABOUT<span class="button-line"></span></span> <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li class="divider"></li>
+							<li><a href="overview.php">Clinic Overview</a></li>
+							<li class="divider"></li>
+							<li><a href="staff.php">Doctor Staff</a></li>
+							<li class="divider"></li>
+							<li><a href="contact.php">Contact Us</a></li>
+							<li class="divider"></li>
+						</ul>
+					</li>
 				</ul>
 			</div>
 			<div id="navbar-right" class="navbar-collapse collapse navbar-right">
 				<?php if(!$is_admin): ?>
-					<button type="button" class="btn navbar-btn btn-default" data-toggle="modal" data-target="#login-modal">ADMIN LOGIN</button>
+					<button type="button" class="btn navbar-btn btn-default" data-toggle="modal" data-target="#login-modal"><span class="glyphicon glyphicon-log-in"></span></button>
 				<?php else: ?>
-					<a role="button" href="<?php echo HP_ADMIN_URL; ?>" class="btn navbar-btn btn-default">MANAGEMENT PAGE</a>
-					<button type="button" name="logout-btn" class="btn navbar-btn btn-default">LOGOUT</button>
+					<a role="button" href="<?php echo HP_ADMIN_URL; ?>" class="btn navbar-btn btn-default"><span class="glyphicon glyphicon-cog"></span></a>
+					<button type="button" name="logout-btn" class="btn navbar-btn btn-default"><span class="glyphicon glyphicon-log-out"></span></button>
 				<?php endif; ?>
 			</div>
 		</div>
@@ -75,7 +100,9 @@
 	<div class="container">
 		<div class="row text-center border-bottom">
 			<h1>Welcome to <?php echo HP_TITLE; ?></h1>
-			<p>We are *****, you can know more about us <a href="services.php">HERE</a>.</p>
+			<div class="col-sm-6 col-sm-offset-3">
+				<p>We concern with the need to eliminate the fundamental cause of illness, not simply remove the symptoms, and with the need to treat the whole person. </p>
+			</div>
 		</div>
 		<div class="row text-center">
 			<div class="col-sm-6">

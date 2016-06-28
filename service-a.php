@@ -1,6 +1,4 @@
-<?php
-include("config.php");
-?>
+<?php include("config.php"); ?>
 
 <!DOCTYPE html>
 <html>
@@ -16,7 +14,7 @@ include("config.php");
 	<script src="js/bootstrap.min.js"></script>
 </head>
 
-<body>
+<body id="top">
 	<!-- ====== NAV ====== -->
 	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 		<div class="container">
@@ -47,20 +45,20 @@ include("config.php");
 			<div id="navbar-left" class="navbar-collapse collapse navbar-left">
 				<ul class="nav navbar-nav">
 					<li role="presentation"><a href="service-a.php"><span class="button-inline">WHAT IS ACUPUNCTURE<span class="button-line"></span></span></a></li>
-					<li role="presentation" class="dropdown">
+					<li role="presentation" class="dropdown active">
 						<a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false"><span class="button-inline">SERVICES<span class="button-line"></span></span> <span class="caret"></span></a>
 						<ul class="dropdown-menu" role="menu">
 							<li class="divider"></li>
 							<li><a href="service-m.php">Massage</a></li>
 							<li class="divider"></li>
-							<li><a href="service-a.php">Acupuncture</a></li>
+							<li class="active"><a href="service-a.php">Acupuncture</a></li>
 							<li class="divider"></li>
 							<li><a href="service-other.php">Other Services</a></li>
 							<li class="divider"></li>
 						</ul>
 					</li>
 					<li role="presentation"><a href="pricing.php"><span class="button-inline">PRICING<span class="button-line"></span></span></a></li>
-					<li role="presentation" class="dropdown active">
+					<li role="presentation" class="dropdown">
 						<a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false"><span class="button-inline">ONLINE RESERVATION<span class="button-line"></span></span> <span class="caret"></span></a>
 						<ul class="dropdown-menu" role="menu">
 							<li class="divider"></li>
@@ -68,7 +66,7 @@ include("config.php");
 							<li class="divider"></li>
 							<li><a href="acupuncture.php">Acupuncture</a></li>
 							<li class="divider"></li>
-							<li class="active"><a href="cancel.php">Cancel</a></li>
+							<li><a href="cancel.php">Cancel</a></li>
 							<li class="divider"></li>
 						</ul>
 					</li>
@@ -101,24 +99,57 @@ include("config.php");
 	<!-- ====== MAIN ====== -->
 	<div class="container">
 		<div class="row text-center border-bottom">
-			<h1>Online Reservation: Cancel</h1>
-			<p>Input your reservation password here.</p>
+			<h1>Services: Acupuncture</h1>
 		</div>
-		<div class="row">
-			<div class="col-sm-4 col-sm-offset-4">
-				<form role="form" id="token-form" class="text-center">
-					<div class="form-group text-left">
-						<label for="token-pw">Cancel Password</label>
-						<input type="text" class="form-control" id="token-pw" data-toggle="tooltip" data-placement="bottom" title="input your cancel password" placeholder="cancel password" value="<?php echo $_GET['token']; ?>" />
-					</div>
-					<div class="form-group text-center">
-						<button type="button" class="btn btn-notice" id="token-btn">Cancel</button>
-					</div>
-				</form>
+		<div class="row text-center">
+			<div class="col-sm-3 col-sm-offset-1">
+				<ul class="service-items col-sm-left">
+					<li><a href="#what-is-massage">What is acupuncture?</a></li>
+					<li><a href="#afraid-of-needle">I&rsquo;m afraid of needle.</a></li>
+					<li><a href="#electro-acu">Electro Acupuncture</a></li>
+					<li><a href="#cupping">Cupping</a></li>
+					<li><a href="#moxibustion">Moxibustion</a></li>
+					<li><a href="#herb-inquiring">Herb Inquiring</a></li>
+				<ul>
+			</div>
+			<div class="col-sm-7 col-sm-left col-sm-border">
+				<h3 id="what-is-massage">What is acupuncture?</h3>
+				<article>
+					<p>&ldquo;Acupuncture&rdquo; means the stimulation of a certain point or points on or near surface of the body by the insertion of needles to prevent or modify the perception of pain or to normalize physiological functions, including pain control for the treatment of certain diseases or dysfunction of the body and include the techniques of <a href="#electro-acu">electro acupuncture</a>, <a href="#cupping">cupping</a>, <a href="#moxibustion">moxibustion</a>. </p>
+					<br />
+				</article>
+				<h3 id="afraid-of-needle">I&rsquo;m afraid of needle.</h3>
+				<article>
+					<p>Phobia: needle is 1/100 thinner than ur hair.</p>
+					<br />
+				</article>
+				<h3 id="electro-acu">Electro Acupuncture</h3>
+				<article>
+					<p>&ldquo;Electro Acupuncture&rdquo; is... </p>
+					<br />
+				</article>
+				<h3 id="cupping">Cupping</h3>
+				<article>
+					<p>&ldquo;Cupping&rdquo; is... </p>
+					<br />
+				</article>
+				<h3 id="moxibustion">Moxibustion</h3>
+				<article>
+					<p>&ldquo;Moxibustion&rdquo; is... </p>
+					<br />
+				</article>
+				<h3 id="herb-inquiring">Herb Inquiring</h3>
+				<article>
+					<p>&ldquo;Herb Inquiring&rdquo; is... </p>
+					<br />
+				</article>
 			</div>
 		</div>
 		<div class="row footer">
 		</div>
+	</div>
+	<div class="go-top">
+		<a class="btn btn-top" href="#top"><span class="glyphicon glyphicon-arrow-up"></span></a>
 	</div>
 	<!-- ====== MAIN END ====== -->
 
@@ -154,31 +185,6 @@ include("config.php");
 		</div>
 	</div>
 	<!-- ====== MODAL END ====== -->
-
-	<!-- ====== MODAL CANCEL ====== -->
-	<div class="modal fade" id="cancel-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-		<div class="modal-dialog modal-sm">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">
-						<span aria-hidden="true">&times;</span>
-					</button>
-					<h4 class="modal-title text-notice">NOTICE</h4>
-				</div>
-				<div class="modal-body">
-					<div class="row">
-						<div class="alert" id="cancel-msg" role="alert"></div>
-						<p>若要取消預約，您的訂金將等待3-5個工作天由醫師退款，請問要繼續嗎？</p>
-					</div>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-notice" id="continue-btn">Yes, continue.</button>
-					<button type="button" class="btn btn-default" data-dismiss="modal">No, thanks</button>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- ====== MODAL CANCEL END ====== -->
 
 	<!-- ====== JAVASCRIPT ====== -->
 	<script src="js/form-check.js"></script>
@@ -222,50 +228,18 @@ include("config.php");
 			});
 			$(e.target).attr('disabled', false);
 		});
-
-		// Cancel Modal
-		$('#token-form').on('keyup keypress', function(e) {
-			var keyCode = e.keyCode || e.which;
-			if(keyCode === 13) {
-				e.preventDefault();
-				$('#token-btn').click();
-			}
-		});
-		$('#token-btn').on('click', function(e) {
-			if(isFormValid($('#token-form'))) {
-				$('#cancel-modal').modal();
-			}
-		});
-		$('#continue-btn').on('click', function(e) {
-			$(e.target).attr('disabled', true);
-			$.ajax({
-				url: 'reserve-cancel.php',
-				type: 'POST',
-				data: {
-					token: $('#token-pw').val()
-				},
-				dataType: 'json',
-				error: function(xhr) {
-					document.getElementById('cancel-msg').innerHTML = "取消失敗，請重新確認您的預約資訊。";
-					$('#cancel-msg').removeClass().addClass("alert alert-danger").fadeIn('fast');
-					$(e.target).attr('disabled', false);
-				},
-				success: function(res) {
-					if(res == true) {
-						document.getElementById('cancel-msg').innerHTML = "預約取消完成，稍後將跳轉至首頁。";
-						$('#cancel-msg').removeClass().addClass("alert alert-info").fadeIn('fast');
-						setTimeout(function() {
-							window.location.replace("<?php echo HP_URL; ?>");
-						}, 5000);
-					}
-				}
-			});
-		});
-		// Cancel Modal END 
-
 		$('*').on('click', function(e) {
 			$('#login-msg').fadeOut('fast');
-			$('#cancel-msg').fadeOut('fast');
+		});
+
+		// slide
+		var position = 80;
+		$('a[href*=#]:not([href=#])').on('click', function(e) {
+			var target = $(this.hash);
+			$('html, body').animate({
+				scrollTop: (target.offset().top - position)
+			}, "show");
+			return false;
 		});
 	});
 	</script>
