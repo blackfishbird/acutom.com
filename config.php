@@ -16,7 +16,7 @@ define("HP_ADMIN_URL", HP_URL."admin-reserve.php");
 define("HP_CANCEL_URL", HP_URL."cancel.php");
 
 // Paypal set
-define("USE_SANDBOX", 1);
+define("USE_SANDBOX", 0);
 if(USE_SANDBOX == true) {
 	define("PAYPAL_ACTION", "https://www.sandbox.paypal.com/cgi-bin/webscr");
 	define("PAYPAL_BUSINESS", "paypalsell@sendbox.com");

@@ -7,30 +7,27 @@
 	<?php include("page-header.php"); ?>
 </head>
 
-<body>
+<body id="top">
 	<?php include("page-navbar.php"); ?>
 	<!-- ====== MAIN ====== -->
 	<div class="container">
 		<div class="row text-center border-bottom">
-			<h1>Welcome to <?php echo HP_TITLE; ?></h1>
-			<div class="col-sm-6 col-sm-offset-3">
-				<p>We concern with the need to eliminate the fundamental cause of illness, not simply remove the symptoms, and with the need to treat the whole person. </p>
-			</div>
+			<h1>Services: Acupuncture</h1>
 		</div>
 		<div class="row text-center">
-			<div class="col-sm-6">
-				<a role="button" href="<?php echo HP_URL.'massage.php'; ?>" class="btn btn-service" id="btn-massage" title="Massage">
-					<h2>MASSAGE</h2>
-				</a>
-			</div>
-			<div class="col-sm-6">
-				<a role="button" href="<?php echo HP_URL.'acupuncture.php'; ?>" class="btn btn-service" id="btn-acupuncture" title="Acupuncture">
-					<h2>ACUPUNCTURE</h2>
-				</a>
+			<div class="col-sm-8 col-sm-offset-2 col-sm-left">
+				<h3 id="what-is-massage">What is acupuncture?</h3>
+				<article>
+					<p>&ldquo;Acupuncture&rdquo; means the stimulation of a certain point or points on or near surface of the body by the insertion of needles to prevent or modify the perception of pain or to normalize physiological functions, including pain control for the treatment of certain diseases or dysfunction of the body and include the techniques of <strong>electro acupuncture</strong>, <strong>cupping</strong>, <strong>moxibustion</strong>. </p>
+					<br />
+				</article>
 			</div>
 		</div>
 		<div class="row footer">
 		</div>
+	</div>
+	<div class="go-top">
+		<a class="btn btn-top" href="#top"><span class="glyphicon glyphicon-arrow-up"></span></a>
 	</div>
 	<!-- ====== MAIN END ====== -->
 
@@ -40,6 +37,10 @@
 	<script src="js/form-check.js"></script>
 	<script>
 	$(function() {
+		$('#li-ser').addClass('active');
+		$('#li-ser-acu').addClass('active');
+		$('#li-ser-acu-what').addClass('active');
+
 		isKeyEnter($('#login-form'), $('#login-btn'));
 		$('#login-btn').on('click', function(e) {
 			if(isFormValid($('#login-form'))) {
@@ -80,6 +81,16 @@
 		});
 		$('*').on('click', function(e) {
 			$('#login-msg').fadeOut('fast');
+		});
+
+		// slide
+		var position = 80;
+		$('a[href*=#]:not([href=#])').on('click', function(e) {
+			var target = $(this.hash);
+			$('html, body').animate({
+				scrollTop: (target.offset().top - position)
+			}, "show");
+			return false;
 		});
 	});
 	</script>

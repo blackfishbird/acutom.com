@@ -1,20 +1,3 @@
-<?php include("config.php"); ?>
-
-<!DOCTYPE html>
-<html>
-
-<head>
-	<meta charset="UTF-8" />
-	<title><?php echo HP_TITLE; ?></title>
-
-	<link rel="stylesheet" href="css/bootstrap.min.css" />
-	<link rel="stylesheet" href="style.css" />
-
-	<script src="js/jquery.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-</head>
-
-<body id="top">
 	<!-- ====== NAV ====== -->
 	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 		<div class="container">
@@ -44,41 +27,76 @@
 			</div>
 			<div id="navbar-left" class="navbar-collapse collapse navbar-left">
 				<ul class="nav navbar-nav">
-					<li role="presentation"><a href="service-a.php"><span class="button-inline">WHAT IS ACUPUNCTURE<span class="button-line"></span></span></a></li>
-					<li role="presentation" class="dropdown active">
+					<li role="presentation"><a href="acupuncture-what-is-acupuncture.php"><span class="button-inline">WHAT IS ACUPUNCTURE<span class="button-line"></span></span></a></li>
+					<li role="presentation" class="dropdown" id="li-ser">
 						<a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false"><span class="button-inline">SERVICES<span class="button-line"></span></span> <span class="caret"></span></a>
 						<ul class="dropdown-menu" role="menu">
 							<li class="divider"></li>
-							<li class="active"><a href="service-m.php">Massage</a></li>
+							<li class="dropdown dropdown-submenu" id="li-ser-acu">
+								<a class="dropdown-toggle" href="service-a.php" data-toggle="dropdown">Acupuncture</a>
+								<ul class="dropdown-menu">
+									<li class="divider"></li>
+<?php /*
+									<li><a href="acupuncture-im-afraid-of-needle.php">I'm afraid of needle.</a></li>
+									<li class="divider"></li>
+*/ ?>
+									<li id="li-ser-acu-what"><a href="acupuncture-what-is-acupuncture.php">What is acupuncture?</a></li>
+									<li class="divider"></li>
+<?php /*
+									<li><a href="acupuncture-electro-acupuncture.php">Electro Acupuncture</a></li>
+									<li class="divider"></li>
+*/ ?>
+								</ul>
+							</li>
 							<li class="divider"></li>
-							<li><a href="service-a.php">Acupuncture</a></li>
+<?php /*
+							<li class="dropdown dropdown-submenu">
+								<a class="dropdown-toggle" href="service-m.php" data-toggle="dropdown">Massage</a>
+								<ul class="dropdown-menu">
+									<li class="divider"></li>
+									<li><a href="massage-what-is-massage.php">What is massage?</a></li>
+									<li class="divider"></li>
+								</ul>
+							</li>
 							<li class="divider"></li>
-							<li><a href="service-other.php">Other Services</a></li>
+							<li class="dropdown dropdown-submenu">
+								<a class="dropdown-toggle" href="service-other.php" data-toggle="dropdown">Other Services</a>
+								<ul class="dropdown-menu">
+									<li class="divider"></li>
+									<li><a href="ohter-electro-acupuncture.php">Electro Acupuncture</a></li>
+									<li class="divider"></li>
+									<li><a href="other-cupping.php">Cupping</a></li>
+									<li class="divider"></li>
+									<li><a href="other-moxibustion.php">Moxibustion</a></li>
+									<li class="divider"></li>
+									<li><a href="other-herb-inquiring.php">Herb Inquiring</a></li>
+									<li class="divider"></li>
+								</ul>
+							</li>
 							<li class="divider"></li>
+*/ ?>
 						</ul>
 					</li>
-					<li role="presentation"><a href="pricing.php"><span class="button-inline">PRICING<span class="button-line"></span></span></a></li>
-					<li role="presentation" class="dropdown">
+					<li role="presentation" id="li-pri"><a href="pricing.php"><span class="button-inline">PRICING<span class="button-line"></span></span></a></li>
+					<li role="presentation" class="dropdown" id="li-res">
 						<a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false"><span class="button-inline">ONLINE RESERVATION<span class="button-line"></span></span> <span class="caret"></span></a>
 						<ul class="dropdown-menu" role="menu">
 							<li class="divider"></li>
-							<li><a href="massage.php">Massage</a></li>
+							<li id="li-res-mas"><a href="massage.php">Massage</a></li>
 							<li class="divider"></li>
-							<li><a href="acupuncture.php">Acupuncture</a></li>
+							<li id="li-res-acu"><a href="acupuncture.php">Acupuncture</a></li>
 							<li class="divider"></li>
-							<li><a href="cancel.php">Cancel</a></li>
+							<li id="li-res-can"><a href="cancel.php">Cancel</a></li>
 							<li class="divider"></li>
 						</ul>
 					</li>
-					<li role="presentation" class="dropdown">
+					<li role="presentation" class="dropdown" id="li-abo">
 						<a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false"><span class="button-inline">ABOUT<span class="button-line"></span></span> <span class="caret"></span></a>
 						<ul class="dropdown-menu" role="menu">
 							<li class="divider"></li>
-							<li><a href="overview.php">Clinic Overview</a></li>
+							<li id="li-abo-sta"><a href="staff.php">Doctor Staff</a></li>
 							<li class="divider"></li>
-							<li><a href="staff.php">Doctor Staff</a></li>
-							<li class="divider"></li>
-							<li><a href="contact.php">Contact Us</a></li>
+							<li id="li-abo-con"><a href="contact.php">Contact Us</a></li>
 							<li class="divider"></li>
 						</ul>
 					</li>
@@ -95,33 +113,6 @@
 		</div>
 	</nav>
 	<!-- ====== NAV END ====== -->
-
-	<!-- ====== MAIN ====== -->
-	<div class="container">
-		<div class="row text-center border-bottom">
-			<h1>Services: Massage</h1>
-		</div>
-		<div class="row text-center">
-			<div class="col-sm-3 col-sm-offset-1">
-				<ul class="service-items col-sm-left">
-					<li><a href="#what-is-massage">What is massage?</a></li>
-				<ul>
-			</div>
-			<div class="col-sm-7 col-sm-left col-sm-border">
-				<h3 id="what-is-massage">What is massage?</h3>
-				<article>
-					<p>&ldquo;Massage&rdquo; means... </p>
-					<br />
-				</article>
-			</div>
-		</div>
-		<div class="row footer">
-		</div>
-	</div>
-	<div class="go-top">
-		<a class="btn btn-top" href="#top"><span class="glyphicon glyphicon-arrow-up"></span></a>
-	</div>
-	<!-- ====== MAIN END ====== -->
 
 	<!-- ====== MODAL ====== -->
 	<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -155,65 +146,3 @@
 		</div>
 	</div>
 	<!-- ====== MODAL END ====== -->
-
-	<!-- ====== JAVASCRIPT ====== -->
-	<script src="js/form-check.js"></script>
-	<script>
-	$(function() {
-		isKeyEnter($('#login-form'), $('#login-btn'));
-		$('#login-btn').on('click', function(e) {
-			if(isFormValid($('#login-form'))) {
-				$(e.target).attr('disabled', true);
-				var account = $('#admin-account').val();
-				var pw = $('#admin-pw').val();
-				$.ajax({
-					url: 'login-admin.php',
-					type: 'POST',
-					dataType: 'json',
-					data: {
-						account: account,
-						pw: pw
-					},
-					error: function(xhr) {
-						document.getElementById('login-msg').innerHTML = "<?php echo $error_msg['login']; ?>";
-						$('#login-msg').fadeIn('fast');
-					},
-					success: function(res) {
-						window.location.replace("<?php echo HP_ADMIN_URL; ?>");
-					}
-				});
-				$(e.target).attr('disabled', false);
-			}
-		});
-		$('button[name="logout-btn"]').on('click', function(e) {
-			$(e.target).attr('disabled', true);
-			$.ajax({
-				url: 'logout.php',
-				type: 'POST',
-				error: function(xhr) {
-				},
-				success: function(res) {
-					window.location.reload();
-				}
-			});
-			$(e.target).attr('disabled', false);
-		});
-		$('*').on('click', function(e) {
-			$('#login-msg').fadeOut('fast');
-		});
-
-		// slide
-		var position = 80;
-		$('a[href*=#]:not([href=#])').on('click', function(e) {
-			var target = $(this.hash);
-			$('html, body').animate({
-				scrollTop: (target.offset().top - position)
-			}, "show");
-			return false;
-		});
-	});
-	</script>
-	<!-- ====== JAVASCRIPT END ====== -->
-</body>
-
-</html>
